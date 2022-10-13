@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portofolio</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT</a>
+                    </li>
+                    <li>
+                        <a href="#">GALLERY</a>
+                    </li>
+                    <li>
+                        <a href="#">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="#">MY INVENTORY</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="box">
+                <div class="landing1">
+                    <img src="gambar/profil.jpg" alt="Gambar Latihan 3" width="150px">
+
+                </div>
+                <div class="landing2">
+                    <h1>
+                        <b id="label_nama">Nandi Saputra</b>
+                    </h1>
+                    <p id="label_role">Front End Designer</p><br>
+                    <button class="link">Kontak</button>
+                    <button class="link1">Resume</button>
+                </div>
+
+                <div class="landing3">
+                    <table >
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Availability</b>
+                                </p>
+                            </td>
+                            <td>
+                                <p id="label_keahlian">Full Time</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Usia</b>
+                                </p>
+                            </td>
+                            <td>
+                                <p id="label_usia">23</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Lokasi</b>
+                                </p>
+                            </td>
+                            <td>
+                                <p id="label_lokasi">Cirebon, Indonesia</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Pengalaman</b>
+                                </p>
+                            </td>
+                            <td>
+                                <p id="label_pengalaman">2</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <b>Email</b>
+                                </p>
+                            </td>
+                            <td>
+                                <p id="label_email">nandysyahputra59@gmail.com</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+            <div class="box1">
+                <form>
+                    <label for="nama">nama</label>
+                    <input type="text" name="nama" id="nama"><br>
+                    <label for="role">Role</label>
+                    <input type="text" name="role" id="role"><br>
+                    <label for="availability">availability</label>
+                    <input type="text" name="availability" id="keahlian"><br>
+                    <label for="usia">Age</label>
+                    <input type="text" name="usia" id="usia"><br>
+                    <label for="lokasi">Lokasi</label>
+                    <input type="text" name="lokasi" id="lokasi"><br>
+                    <label for="years_experience">Years Experience</label>
+                    <input type="text" name="years_experience" id="pengalaman"><br>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email"><br>
+                    <button id="btn-simpan" class="link2">Resume</button>
+
+                </form>
+            </div>
+
+        </div>
+        <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        <script src="js/jquery.min.js"></script>
+        <script>
+            portofolio();
+
+            function portofolio() {
+                document
+                    .getElementById('nama')
+                    .value = "Nandi Saputra";
+                document
+                    .getElementById('role')
+                    .value = "Front End Designer";
+                document
+                    .getElementById('keahlian')
+                    .value = "Full Time";
+                document
+                    .getElementById('usia')
+                    .value = "23";
+                document
+                    .getElementById('lokasi')
+                    .value = "Cirebon, Indonesia";
+                document
+                    .getElementById('pengalaman')
+                    .value = "2";
+                document
+                    .getElementById('email')
+                    .value = "nandysyahputra59@gmail.com";
+            }
+
+            $('#btn-simpan').click((e) => {
+                e.preventDefault();
+                let nama = $('#nama').val();
+                let role = $('#role').val();
+                let keahlian = $('#keahlian').val();
+                let usia = $('#usia').val();
+                let lokasi = $('#lokasi').val();
+                let pengalaman = $('#pengalaman').val();
+                let email = $('#email').val();
+
+                $('#label_nama').text(nama);
+                $('#label_role').text(role);
+                $('#label_keahlian').text(keahlian);
+                $('#label_usia').text(usia);
+                $('#label_lokasi').text(lokasi);
+                $('#label_pengalaman').text(pengalaman);
+                $('#label_email').text(email);
+            });
+        </script>
+
+        <script src="js/bootstrap3.min.js"></script>
+    </body>
+
+</html>
